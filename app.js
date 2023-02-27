@@ -7,6 +7,7 @@ const mongoSanitize = require('express-mongo-sanitize');
 const xss = require('xss-clean');
 const hpp = require('hpp');
 const cookieParser = require('cookie-parser');
+const compression = require('compression');
 
 const AppError = require('./utils/appError');
 const globalErrorHandler = require('./controllers/errorController');
@@ -58,15 +59,6 @@ const limiter = rateLimit({
 });
 app.use('/api', limiter);
 
-//
-
-// app.all('*', (req, res, next) => {
-//     req.rickysProperty = true;
-//     console.log(req)
-//     next();
-// });
-
-
 //Body parser, reading data from body into req.body
 app.use(express.json({
     limit: '10kb'
@@ -94,6 +86,8 @@ app.use(hpp({
         'price'
     ]
 }));
+
+app.use(compression());
 
 //Serving static files
 
