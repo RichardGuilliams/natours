@@ -1,6 +1,5 @@
 /* eslint-disable */
 import '@babel/polyfill';
-import { showAlert } from './alerts';
 import { displayMap } from './mapBox'
 import { login, logout } from './login'
 import { updateSettings } from './updateSettings'
@@ -70,6 +69,3 @@ if(bookBtn){
 }
 
 if(logoutBtn) logoutBtn.addEventListener('click', logout);
-
-const alertMessage = document.querySelector('body').dataset.alert;
-if (alert) showAlert('success', alertMessage, 20);
