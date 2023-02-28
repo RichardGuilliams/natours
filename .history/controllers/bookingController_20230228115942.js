@@ -48,12 +48,12 @@ exports.createBookingCheckout = catchAsync(async (req, res, next) => {
   // 1) Deconstruct the query to extract booking information
   const { tour, user, price } = req.query;
   
-  // 2) Skip function if any data is missing
+  // 2) Skip funtion if any data is missing
   if(!tour || !user || !price) return next();
 
   // 3) Create a new booking
   await Booking.create({ tour, user, price });
-
+  
   // 4) Redirect client to the original url
   res.redirect(req.originalUrl.split('?')[0]);
 });
