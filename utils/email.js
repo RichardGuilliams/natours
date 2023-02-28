@@ -7,7 +7,7 @@ module.exports = class Email{
         this.to = user.email;
         this.firstName = user.name.split(' ')[0];
         this.url = url;
-        this.from = `Richar Guilliams <${process.env.EMAIL_FROM}>`
+        this.from = `Richard Guilliams <${process.env.EMAIL_FROM}>`
     }
 
     newTransport(){
@@ -56,25 +56,11 @@ module.exports = class Email{
     }
 
     async sendWelcome(){
-        await this.send('welcome', 'Welcome to the natours family! :)')
+        await this.send('welcome', 'Welcome to the natours family. we\'re lucky to have you.')
     }
 
     async sendPasswordReset(){
         await this.send('passwordReset', 'Your password reset token (valid for ten minutes)');
     }
 }
-
-// const sendEmail = async options => {
-//     //2 define email options
-//     const emailOptions = {
-//         from: 'Richard Guilliams <richardlg231@gmail.com>',
-//         to: options.email,
-//         subject: options.subject,
-//         text: options.message,
-//         // html: 
-//     }
-
-//     //3 send email
-
-// }
 
