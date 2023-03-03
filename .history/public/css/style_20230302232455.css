@@ -1320,13 +1320,9 @@ body {
 }
 
 @media only screen and (max-width: 1080px){
-  .heading-box{
-    min-width: 90%
-  }
-
   .heading-primary{
     line-height: 7rem;
-    min-width: 90%;
+    min
   }
   
   h1 span{
@@ -1357,23 +1353,6 @@ body {
 }
 
 @media only screen and (max-width: 630px){
-  .heading-box{
-    min-width: 90%
-  }
-
-  .heading-primary{
-    line-height: 6rem;
-    min-width: 90%;
-  }
-  
-  h1 span{
-    font-size: 2.5rem;
-  }
-
-  .heading-box__group{
-    margin-top: 1rem;
-  }
-
   .nav__el:link{
     font-size: 1.5rem;
     padding: 1rem;
