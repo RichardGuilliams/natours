@@ -1320,8 +1320,5 @@ body {
 }
 
 @media only screen and (max-width: 840px){
-  .card-container{
-    display: flex;
-    flex-direction: column;
-  }
+  
 }

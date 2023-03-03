@@ -1319,9 +1319,8 @@ body {
   transform: translateY(-2px);
 }
 
-@media only screen and (max-width: 840px){
-  .card-container{
-    display: flex;
-    flex-direction: column;
+@media only screen and (max-width: 600px){
+  body{
+    background-color: blue;
   }
 }

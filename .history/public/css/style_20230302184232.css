@@ -316,13 +316,16 @@ body {
   align-items: center;
 }
 @media only screen and (max-width: 62.5em) {
-
-}
-.header__logo img {
-  height: 3.5rem;
+  .header {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
 }
 @media only screen and (max-width: 62.5em) {
   .header__logo {
+    height: 3.5rem;
     -webkit-box-ordinal-group: 0;
     -ms-flex-order: -1;
     order: -1;
@@ -1133,6 +1136,7 @@ body {
   font-weight: 700;
   grid-column: 1 / -1;
 }
+.
 .card__text {
   grid-column: 1 / -1;
   font-size: 1.5rem;
@@ -1319,7 +1323,7 @@ body {
   transform: translateY(-2px);
 }
 
-@media only screen and (max-width: 840px){
+@media screen and (min-width: 30em){
   .card-container{
     display: flex;
     flex-direction: column;
