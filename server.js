@@ -20,7 +20,7 @@ mongoose
     useFindAndModify: false,
 })
 .then(() => console.log(`DB connection successful`))
-.catch(err => console.log('ERROR you fucked up'));
+.catch(err => console.log('ERROR you made a mistake'));
 
 
 
